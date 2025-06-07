@@ -53,8 +53,8 @@ menu:
 
 params: 
   homeInfoParams:
-    Title: "Welcome"
-    Content: "to my blog"
+    Title: "Welcome to gu's Blog"
+    Content: 
   disableSearch: false  # 启用搜索功能
   mainSections: ["posts"]  # 告诉 PaperMod 归档使用 posts 目录中的文章
 
