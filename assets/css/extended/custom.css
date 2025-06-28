@@ -1,0 +1,14 @@
+/* 设置代码字体 */
+@font-face {
+  font-family: 'MesloLGM Nerd Font';
+  src: url('/fonts/MesloLGMNerdFont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 字体设置 */
+.post-content pre,
+.post-content code {
+  font-family: 'MesloLGM Nerd Font', monospace !important;
+  color: inherit;  /* 不覆盖语法高亮色 */
+}

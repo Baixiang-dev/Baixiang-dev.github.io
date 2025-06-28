@@ -4,7 +4,7 @@ copyright: "[©2025 chengxugu's Blog](https://chengxugu.github.io/)" # 网站的
 theme: PaperMod # 主题
 languageCode: zh-cn # 语言
 
-enableInlineShortcodes: true # shortcode，类似于模板变量，可以在写 markdown 的时候便捷地插入，官方文档中有一个视频讲的很通俗
+enableInlineShortcodes: true # shortcode，类似于模板变量
 hasCJKLanguage: true # 是否有 CJK 的字符
 enableRobotsTXT: true # 允许生成 robots.txt
 buildDrafts: false # 构建时是否包括草稿
@@ -51,7 +51,16 @@ menu:
       params:
         target: "_blank"
 
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    noClasses: false
+    style: dracula
+
 params: 
+  assets:
+    disableHLJS: true
   homeInfoParams:
     Title: "Welcome to gu's Blog"
     Content: 
