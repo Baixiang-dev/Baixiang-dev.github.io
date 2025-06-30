@@ -46,7 +46,7 @@ menu:
 
     - identifier: github
       name: GitHub
-      url: "https://github.com/yourname"
+      url: "https://github.com/chengxug/" 
       weight: 4
       params:
         target: "_blank"
