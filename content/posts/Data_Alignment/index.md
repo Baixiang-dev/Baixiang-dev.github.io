@@ -30,7 +30,7 @@ struct example{
 ```C
 struct example{
 	char a; // 1 byte
-			// 3 byte padding
+		// 3 byte padding
 	int b;  // 4 byte
 } 
 ```
@@ -52,7 +52,7 @@ struct example_1{
 struct example_1{
 	int a;  // 4 byte
 	char b; // 1 byte
-			// 3 byte padding 保证结构大小是最大类型 int 大小的整数倍
+		// 3 byte padding 保证结构大小是最大类型 int 大小的整数倍
 }
 ```
 
