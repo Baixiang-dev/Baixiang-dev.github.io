@@ -57,8 +57,24 @@ markup:
     guessSyntax: true
     noClasses: false
     style: dracula
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+          - - $
+            - $
+        enable: true
 
-params: 
+params:
+  math: false 
   assets:
     disableHLJS: true
   # homeInfoParams:
