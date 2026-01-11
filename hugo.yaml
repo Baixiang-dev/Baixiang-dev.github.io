@@ -1,6 +1,6 @@
 baseURL: "https://chengxugu.github.io/" # 主站的 URL
 title: chengxugu's Blog # 站点标题
-copyright: "[©2025 chengxugu's Blog](https://chengxugu.github.io/)" # 网站的版权声明，通常显示在页脚
+copyright: "[©2026 chengxugu's Blog](https://chengxugu.github.io/)" # 网站的版权声明，通常显示在页脚
 theme: PaperMod # 主题
 languageCode: zh-cn # 语言
 
@@ -77,9 +77,9 @@ params:
   math: false 
   assets:
     disableHLJS: true
-  # homeInfoParams:
-  #   Title: "Welcome to gu's Blog"
-  #   Content: 
+  homeInfoParams:
+    Title: "Welcome to gu's Blog"
+    Content: "哈喽, 欢迎来到我的博客！这里记录了我的学习总结和一些问题的解决方案，后续可能会拓展更多生活相关的记录，希望这里的内容能对你有所帮助！"
   disableSearch: false  # 启用搜索功能
   mainSections: ["posts"]  # 告诉 PaperMod 归档使用 posts 目录中的文章
 
