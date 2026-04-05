@@ -79,7 +79,7 @@ params:
     disableHLJS: true
   homeInfoParams:
     Title: "Welcome to gu's Blog"
-    Content: "你好，陌生的来客，我是世界上的一粒灰尘，想被其他的存在了解，这里是一个了解我的通道，记录了我生活和技术上的一些思考总结，如果你有兴趣了解我，不妨一看；如果在此之余，其中的内容能对你有所帮助，我将非常开心。" 
+    Content: "哈喽，欢迎来到我的博客。这里目前记录我个人在专业上的一些笔记和总结，后面计划拓展更多方面的思考总结，希望其中的内容能对你有所帮助。" 
   disableSearch: false  # 启用搜索功能
   mainSections: ["posts"]  # 告诉 PaperMod 归档使用 posts 目录中的文章
 
