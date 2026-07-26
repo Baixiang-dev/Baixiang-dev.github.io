@@ -1,6 +1,6 @@
 baseURL: "https://chengxugu.github.io/" # 主站的 URL
-title: chengxugu's Blog # 站点标题
-copyright: "[©2026 chengxugu's Blog](https://chengxugu.github.io/)" # 网站的版权声明，通常显示在页脚
+title: 白想's Blog # 站点标题
+copyright: "[©2026 白想's Blog](https://baixiang.github.io/)" # 网站的版权声明，通常显示在页脚
 theme: PaperMod # 主题
 languageCode: zh-cn # 语言
 
@@ -46,7 +46,7 @@ menu:
 
     - identifier: github
       name: GitHub
-      url: "https://github.com/chengxug/" 
+      url: "https://github.com/baixiang-dev/" 
       weight: 4
       params:
         target: "_blank"
@@ -78,7 +78,7 @@ params:
   assets:
     disableHLJS: true
   homeInfoParams:
-    Title: "Welcome to gu's Blog"
+    Title: "Welcome to 白想's Blog"
     Content: "哈喽，欢迎来到我的博客。这里目前记录我个人在专业上的一些笔记和总结，后面计划拓展更多方面的思考总结，希望其中的内容能对你有所帮助。" 
   disableSearch: false  # 启用搜索功能
   mainSections: ["posts"]  # 告诉 PaperMod 归档使用 posts 目录中的文章
@@ -86,7 +86,7 @@ params:
   comments: true # 启用评论功能
 
   giscus: # Giscus 评论系统配置
-    repo: chengxug/chengxug.github.io
+    repo: baixiang-dev/baixiang.github.io
     repo_id: R_kgDOL4P7xQ
     category: Announcements
     category_id: DIC_kwDOL4P7xc4CrGmm

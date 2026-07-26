@@ -6,7 +6,7 @@ tags:
     - learning record
 math: true
 ---
-提问：下面这个结构体在内存中占多少个字节？
+尝试思考一个问题：下面这个结构体在内存中占多少个字节？
 ```C
 struct example{
 	char a;
