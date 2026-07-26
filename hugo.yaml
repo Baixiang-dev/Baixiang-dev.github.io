@@ -86,7 +86,7 @@ params:
   comments: true # 启用评论功能
 
   giscus: # Giscus 评论系统配置
-    repo: baixiang-dev/baixiang.github.io
+    repo: baixiang-dev/baixiang-dev.github.io
     repo_id: R_kgDOL4P7xQ
     category: Announcements
     category_id: DIC_kwDOL4P7xc4CrGmm
