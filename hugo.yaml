@@ -1,6 +1,6 @@
-baseURL: "https://chengxugu.github.io/" # 主站的 URL
+baseURL: "https://baixiang-dev.github.io/" # 主站的 URL
 title: 白想's Blog # 站点标题
-copyright: "[©2026 白想's Blog](https://baixiang.github.io/)" # 网站的版权声明，通常显示在页脚
+copyright: "[©2026 白想's Blog](https://baixiang-dev.github.io/)" # 网站的版权声明
 theme: PaperMod # 主题
 languageCode: zh-cn # 语言
 
@@ -77,6 +77,11 @@ params:
   math: false 
   assets:
     disableHLJS: true
+
+  analytics: # 网站统计配置
+    google:
+      id: "G-ZXSF3W965J" # GA4 衡量 ID（Measurement ID）
+      SiteVerificationTag: "" # Google Search Console 站点验证码
   homeInfoParams:
     Title: "Welcome to 白想's Blog"
     Content: "哈喽，欢迎来到我的博客。这里目前记录我个人在专业上的一些笔记和总结，后面计划拓展更多方面的思考总结，希望其中的内容能对你有所帮助。" 
