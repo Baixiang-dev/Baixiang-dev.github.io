@@ -23,35 +23,35 @@ std::atomic<bool> quit{false};
 
 void sigint_handler(int)
 {
- std::cout << "[main] SIGINT received\n";
+    std::cout << "[main] SIGINT received\n";
     quit = true;
 }
 
 void accept_thread()
 {
- std::cout << "[accept] calling accept()...\n";
+    std::cout << "[accept] calling accept()...\n";
 
     sockaddr_in cli{};
- socklen_t   len = sizeof(cli);
+    socklen_t   len = sizeof(cli);
 
- int fd = accept(listen_fd, (sockaddr*)&cli, &len);
- if (fd < 0)
- {
- std::cout << "[accept] accept returned -1, errno=" << errno << " (" << strerror(errno)
- << ")\n";
- }
- else
- {
- std::cout << "[accept] accepted\n";
- close(fd);
- }
+    int fd = accept(listen_fd, (sockaddr*)&cli, &len);
+    if (fd < 0)
+    {
+        std::cout << "[accept] accept returned -1, errno=" << errno << " (" << strerror(errno)
+                  << ")\n";
+    }
+    else
+    {
+        std::cout << "[accept] accepted\n";
+        close(fd);
+    }
 
- std::cout << "[accept] exit\n";
+    std::cout << "[accept] exit\n";
 }
 
 int main()
 {
- signal(SIGINT, sigint_handler);
+    signal(SIGINT, sigint_handler);
 
     listen_fd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -60,28 +60,28 @@ int main()
     addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
     addr.sin_port = htons(7777);
 
- bind(listen_fd, (sockaddr*)&addr, sizeof(addr));
- listen(listen_fd, 16);
+    bind(listen_fd, (sockaddr*)&addr, sizeof(addr));
+    listen(listen_fd, 16);
 
- std::thread t(accept_thread);
+    std::thread t(accept_thread);
 
- while (!quit) pause();
+    while (!quit) pause();
 
- std::cout << "[main] server stopped\n";
+    std::cout << "[main] server stopped\n";
 
     /**
      * 1. 使用 close 关闭，不能唤醒阻塞的 accept
-     * - 直接运行时 此处应该看到程序卡在 t.join() 处
-     * - 使用 gdb 调试发送 SIGINT信号时，ptrace会中断accept调用，再次执行时，在已经 close 的 socket
+     *   直接运行时 此处应该看到程序卡在 t.join() 处
+     *   使用 gdb 调试发送 SIGINT信号时，ptrace会中断accept调用，再次执行时，在已经 close 的 socket
      *  上 accept 返回错误，errno=9 (Bad file descriptor)
      */
- close(listen_fd);
+    close(listen_fd);
 
     // 2. 使用 shutdown 关闭 socket，会唤醒阻塞的 accept, 此处应该看到返回的错误是 invalid argument
     // shutdown(listen_fd, SHUT_RDWR);
 
     t.join();   // ← 直接运行时会卡在这里
- std::cout << "[main] exit\n";
+    std::cout << "[main] exit\n";
 }
 ```
 
